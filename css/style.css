@@ -63,7 +63,7 @@ body {
     width: 30vw;
 }
 
-.form__inpt-email:invalid {
+.form__inpt-email--error {
     border-color: var(--color-light-red);
     color: var(--color-light-red);
 }
@@ -72,7 +72,7 @@ body {
     color: var(--color-pale-blue);
 }
 
-.form__inpt-email:invalid::placeholder {
+.form__inpt-email--error::placeholder {
     color: var(--color-light-red);
 }
 
@@ -84,6 +84,10 @@ body {
     left: 1.5rem;
     top: 2.3rem;
     display: none;
+}
+
+.form__inpt-email--error ~ .form__error-text {
+    display: block;
 }
 
 .form__btn {
